@@ -5,7 +5,7 @@ import REQUEST from './public/request.mjs';
 import * as cryptoUtils from './public/cryptoutils.mjs';
 
 const PG_URL =
-  process.env.DATABASE_URL || 'postgresql://indexer:REDACTED@localhost:5432/indexer';
+  process.env.DATABASE_URL || 'postgresql://localhost:5432/indexer';
 const BATCH_SIZE = Number(process.env.BATCH_SIZE || 1000);
 const pool = new Pool({ connectionString: PG_URL });
 

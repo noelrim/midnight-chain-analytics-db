@@ -9,7 +9,7 @@ import * as cryptoUtils from './public/cryptoutils.mjs';
 import { upsertValidatorMetadata } from './validator_metadata_ingest.mjs';
 
 const PG_URL = process.env.DATABASE_URL
-  || 'postgresql://indexer:REDACTED@localhost:5432/indexer';
+  || 'postgresql://localhost:5432/indexer';
 const BATCH_SIZE = Number(process.env.BATCH_SIZE || 1000);
 const pool = new Pool({ connectionString: PG_URL });
 

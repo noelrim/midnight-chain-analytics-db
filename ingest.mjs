@@ -18,7 +18,7 @@ const DEBUG_BLOCK = Number(process.env.DEBUG_BLOCK || 738);
 
 // ---------- PG ----------
 const pool = new Pool({
-  connectionString: "postgresql://indexer:REDACTED@localhost:5432/indexer",
+  connectionString: process.env.DATABASE_URL || 'postgresql://localhost:5432/indexer',
 });
 
 const resp = await REQUEST.getEpoch();

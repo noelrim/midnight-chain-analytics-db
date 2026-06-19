@@ -7,7 +7,7 @@ import { Pool } from 'pg';
 import REQUEST from './public/request.mjs';
 
 const PG_URL = process.env.DATABASE_URL
-  || 'postgresql://indexer:REDACTED@localhost:5432/indexer';
+  || 'postgresql://localhost:5432/indexer';
 const BATCH_SIZE = Number(process.env.BATCH_SIZE || 500);
 const pool = new Pool({ connectionString: PG_URL });
 

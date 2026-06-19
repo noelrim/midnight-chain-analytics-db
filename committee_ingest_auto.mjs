@@ -6,7 +6,7 @@ import { Pool } from 'pg';
 import REQUEST from './public/request.mjs';
 
 const PG_URL = process.env.DATABASE_URL
-  || 'postgresql://indexer:REDACTED@localhost:5432/indexer';
+  || 'postgresql://localhost:5432/indexer';
 
 const BATCH_SIZE = 1000;                 // batch rows per insert
 const MAX_EPOCHS_PER_RUN = Number(process.env.MAX_EPOCHS_PER_RUN || 1000); // safety cap
